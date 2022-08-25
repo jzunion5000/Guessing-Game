@@ -1,21 +1,48 @@
-// the .input needs to be connected to .guess reset and .guess submit
-const input = document.querySelector(".input");
-const guessReset = document.querySelector(".guess-reset")
-const guessSubmit = document.querySelector(".guess-submit")
+//const winningNumber = 1 + Math.floor(Math.random() *winNumber);
+    //User gets 5 tries. If user guesses correct between 1-5 tries, user wins and game is over. 
+    //If no right guess in 5 tries, user loses and game is over.
 
-// reset needs to clear eveything 
-// guessReset.addEventListener("click", function(){
-//     if(Number(input))
-//     return;
-// })
+    let correctNumber = Math.random();
 
-guessSubmit.addEventListener("click", function ({
-    for(let i = 1; i < 101) {
-        return();
+function checkGuess() {
+    let myGuess = guess.value;
+    if (myGuess === randomNumber) {
+        console.log("Correct!");
+    } else if (myGuess > randomNumber) {
+        console.log("Too high bozo!");
+    } else if (myGuess < randomNumber) {
+        console.log("Too low loser!");
+    }
 }
 
+
+
+
+
+const input = document.querySelector(".input");
+/*input.addEventListener("submit", function() {
+   getElementById(".input").value = "0";
+   for(let i = 0; i < 101) {
+    return i;
+   }
+})*/
+
+let game = function();
+
+this.winningNumber = generatewinningNumber;
+
+const guessSubmit = document.querySelector(".guess-submit");
+    guessSubmit.addEventListener("click", function (){
+        const userNumber = input.value;
+        const guess = document.querySelector(".guess");
+        guess.textContent = userNumber; 
+            if (userNumber === correctNumber) {
+                return true;
+            }
+    })
+
+const guessReset = document.querySelector(".guess-reset");
+guessReset.addEventListener("click", function(){
+//reset button needs to clear all numbers in boxes upon clicking
 })
 
-// submit needs to submit whatever is connected to input
-// submit also will connect to the 5 boxes that indicate the numbers so far and save them until 5 guesses are used
-// current guess needs to be saved so that the number can stick 
